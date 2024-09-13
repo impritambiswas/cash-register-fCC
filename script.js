@@ -17,9 +17,9 @@ const values = [
   { 'QUARTER': 0.25 },
   { 'ONE': 1 },
   { 'FIVE': 5 },
-  { 'TEN': 10 }
-  {'TWENTY': 20},
-  {'ONE HUNDRED': 100}
+  { 'TEN': 10 },
+  { 'TWENTY': 20 },
+  { 'ONE HUNDRED': 100 }
 ]
 
 const cash = document.getElementById('cash');
@@ -65,4 +65,5 @@ const changeValidation = () => {
       reqMoney = 0;
     }
   }
-  purchaseBtn.addEventListener('click', giveChange);
+}
+purchaseBtn.addEventListener('click', giveChange);
