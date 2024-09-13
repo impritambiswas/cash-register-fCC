@@ -18,3 +18,23 @@ h1 {
   width: max-content;
   border-radius: 0 0.8rem 0.8rem 0;
 }
+
+main {
+  margin-inline: auto;
+  padding: 3rem 5rem;
+
+  width: max-content;
+  border-radius: 0.4rem;
+
+  background-color: var(--dark-elem-bg);
+  color: var(--dark-txt);
+}
+
+#cash {
+  padding: 0.4rem 1rem;
+}
+
+#purchase-btn {
+  display: block;
+  margin-block: 0.6rem;
+}
