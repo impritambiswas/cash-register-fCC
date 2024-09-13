@@ -32,6 +32,9 @@ main {
 
 #cash {
   padding: 0.4rem 1rem;
+
+  border: none;
+  border-radius: 0.4rem;
 }
 
 #purchase-btn {
@@ -40,4 +43,5 @@ main {
   padding: 0.2rem 1.5rem;
 
   border: none;
+  border-radius: 0.2rem;
 }
