@@ -40,7 +40,7 @@ const giveChange = () => {
   }
 }
 
-const changeValidation = () => {
+const changeValidation = (cash) => {
   const valueForMoney = [0.01, 0.05, 0.1, 0.25, 1, 5, 10, 20, 100].reverse();
   const cashInDrawer = cid.slice().map(val => val[1]).reverse();
   const monetery = cid.slice().map(key => key[0]).reverse();
@@ -62,14 +62,7 @@ const changeValidation = () => {
     return;
   } else {
     reset();
-    for (let i = 0; i < valueForMoney.length; i++) {
-      while (changeAmount >= valueForMoney[i]) {
-        changeAmount -= valueForMoney[i];
-        reqMoney += valueForMoney[i];
-        changeDue.innerHTML += `<p>${monetery[i]} : ${reqMoney / valueForMoney[i]}</p>`;
-      }
-      reqMoney = 0;
-    }
+    giveMoney()
   }
 }
 purchaseBtn.addEventListener('click', giveChange);
