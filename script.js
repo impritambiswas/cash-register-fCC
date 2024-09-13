@@ -26,6 +26,11 @@ const cash = document.getElementById('cash');
 const changeDue = document.getElementById('change-due');
 const purchaseBtn = document.getElementById('purchase-btn');
 
+const reset = () => {
+  cash.value = '';
+  changeDue.innerHTML = ``;
+}
+
 
 const giveChange = () => {
   if (cash.value === '' || parseFloat(cash.value) < price) {
@@ -56,6 +61,7 @@ const changeValidation = () => {
     changeDue.textContent = 'Status: INSUFFICIENT_FUNDS';
     return;
   } else {
+    reset();
     for (let i = 0; i < valueForMoney.length; i++) {
       while (changeAmount >= valueForMoney[i]) {
         changeAmount -= valueForMoney[i];
