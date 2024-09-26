@@ -36,7 +36,7 @@ const giveChange = () => {
   if (cash.value === '' || parseFloat(cash.value) < price) {
     alert('Customer does not have enough money to purchase the item');
   } else {
-    changeValidation();
+    changeValidation(cash);
   }
 }
 
@@ -62,7 +62,8 @@ const changeValidation = (cash) => {
     return;
   } else {
     reset();
-    giveMoney()
+    giveChange();
   }
+  return console.log(cash.value);
 }
 purchaseBtn.addEventListener('click', giveChange);
